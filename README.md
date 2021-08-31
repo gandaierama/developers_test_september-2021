@@ -75,5 +75,7 @@ Perde pontos se:
 ---
 ## Prazo
 Início: Até 02/Setembro
+
 Data a ser contada: No início do envio da Issue
+
 Data final: 20/Setembro
