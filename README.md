@@ -83,6 +83,9 @@ Data final: 20/Setembro
 ---
 ## Optin
 Para aceitar o teste, abra uma issue nesse repositório com o template: [seunome]-[data]-aceite
+
 [seunome] = Seu nome completo
+
 [data] = a data do dia que criou a issue
+
 aceite = manter da mesma forma
