@@ -4,13 +4,29 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SideBar from "../components/SideBar";
 import Post from "../components/Post";
-export default function IndexPage({posts}:{ posts:any }) {
+export default function IndexPage({props}:{ props:any }) {
+  console.log(props.gender);
   return (
     <>
       <Header />
-
-      <Post posts={posts.results} />
+      <div className="row">
+        <div className="d-sm-none d-md-block col-md-3">
+        <div className="list-group mt-5">
+            <li className="list-group-item list-group-item-dark p-3 text-center">Genres</li>
+                  {props.gender.genres.map((item:any) => (
+     
+          <a href="#" className="list-group-item list-group-item-action " key={item.id} aria-current="true">
+    {item.name}
+  </a>
+           ))}
+                  </div>
+        </div>
+        <div className="col-12 col-md-9">
+          <Post posts={props.posts.results} />
+        </div>
+      </div>
       <Footer />
     </>
   );
@@ -18,7 +34,12 @@ export default function IndexPage({posts}:{ posts:any }) {
 
 
 IndexPage.getInitialProps = async (ctx:any) => {
-  const res = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=45c857b10f1d7b5f1b33127149d88893')
-  const posts = await res.json()
-  return { posts }
+
+  const res = await fetch(process.env.URL_MOVIE+'movie/popular?api_key='+process.env.API_KEY)
+  const posts = await res.json();
+
+  const res2 = await fetch(process.env.URL_MOVIE+'genre/movie/list?api_key='+process.env.API_KEY)
+  const gender = await res2.json();
+  console.log(gender);
+  return { props:{posts, gender} }
 }

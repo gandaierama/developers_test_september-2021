@@ -1,5 +1,4 @@
 export default function Post(props:any){
-  console.log(props.posts);
 
   return(
     <div className="album py-5 bg-light">
