@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Post from "../components/Post";
-export default function IndexPage({ posts }) {
+export default function IndexPage({posts}:{ posts:any }) {
   return (
     <>
       <Header />
@@ -17,7 +17,7 @@ export default function IndexPage({ posts }) {
 }
 
 
-IndexPage.getInitialProps = async (ctx) => {
+IndexPage.getInitialProps = async (ctx:any) => {
   const res = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=45c857b10f1d7b5f1b33127149d88893')
   const posts = await res.json()
   return { posts }

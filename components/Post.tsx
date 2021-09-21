@@ -1,4 +1,4 @@
-export default function Post(props){
+export default function Post(props:any){
   console.log(props.posts);
 
   return(
@@ -9,7 +9,7 @@ export default function Post(props){
       
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-        {props.posts.map((post) => (
+        {props.posts.map((post:any) => (
      
           <div className="col">
             <div className="card shadow-sm">
