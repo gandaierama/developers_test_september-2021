@@ -1,91 +1,34 @@
-# Developers Test - Setembro/2021
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-O objetivo do nosso teste é entender as capacidades analíticas de nossos colaboradores e, também, incentivar estudos e introduzir novas tecnologias que estejam diretamente ligadas a JavaScript*.
+## Getting Started
 
-Obs.: Testes posteriores trarão linguagens como Python, .NET e PHP.
+First, run the development server:
 
----
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## O Teste
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Vamos criar uma aplicação que consuma os dados da API do <a href="https://www.themoviedb.org/documentation/api?language=pt-BR" target="_blank">TheMovieDB</a> para listagem de filmes, séries e shows.
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-A documentação do TheMovieDB encontra-se em inglês, então esse é mais um teste para vocês. Ela deve ser lida e entendida.
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-Para fins de teste da API, vocês podem utilizar o <a href="https://www.postman.com/" target="_blank">Postman</a>.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
----
-## Requisitos
+## Learn More
 
-### Quais tecnologias devem ser utilizadas?
-* React.js (<i>w/wo CRA - Create React App</i>)
-* Git (<i>for the most obvious reasons</i>)
+To learn more about Next.js, take a look at the following resources:
 
-### Quais tecnologias posso utilizar pra dar um charme a mais?
-* Node.js
-* Mongo.DB
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Quais tecnologias não devo utilizar?
-* Qualquer outra linguagem não relacionada a JavaScript
-* jQuery (por favor né, estamos em 2021)
-* Axios (use e abuse do <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/XMLHTTPRequest" target="_blank">XHR</a> e <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API/Using_Fetch" target="_blank">Fetch</a>)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-### O que o site precisa ter?
-* Uma lista de trending movies e séries de TV (Uma ótima referência é o próprio site do TheMovieDB).
-* Uma página interna que mostra os detalhes do filme/série.
-* Um campo de pesquisa
+## Deploy on Vercel
 
-Vocês podem exceder a lista de necessidades, mas atenham-se ao tempo.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
----
-## Evitar
-
-Não é necessário se preocupar com layout ou responsividade. O objetivo do teste é justamente testar skills como inglês (leitura), lógica e organização de código.
-Foque em ter uma API sendo consumida de forma estável ao invés de um layout que não traga os dados necessários.
-
----
-## Avaliação
-
-Ganha pontos se:
-* Mandar bem no inglês
-* Modularizar/Componentizar o código
-* Documentar o código
-* Readme.md explicativo e de fácil execução para teste do projeto
-* Estar hospedado em alguma plataforma como Heroku ou Netlify
-* Commitar corretamente, de forma a explicar o que foi feito.
-
-Ganha muitos pontos se:
-* Consumir os dados via Node.js e cacheá-los dentro do MongoDB
-* Criar um sistema CRUD de autenticação para usuários logados
-* Utilizar o Context do React
-* Desenvolver a aplicação totalmente em paradigma Funcional
-* Apresentar para toda a equipe o que foi feito e todo o modelo de lógica (data a ser definida)
-* Preocupar-se em performance
-* Preocupar-se em acessibilidade
-
-Perde pontos se:
-* Usar bibliotecas em excesso e sem necessidade
-* Código bagunçado e de difícil manutenebilidade
-* Utilizar algum item que esteja na lista de tecnologias que não podem ser utilizadas
-* Não criar um readme.md
-* Commitar a node_modules ou pastas como build, dist, etc
-* Não commitar o projeto
-* Commits mal explicados ou condensados todos em um só
-
----
-## Prazo
-Início: Até 02/Setembro
-
-Data a ser contada: No início do envio da Issue
-
-Data final: 20/Setembro
-
----
-## Optin
-Para aceitar o teste, abra uma issue nesse repositório com o template: [seunome]-[data]-aceite
-
-[seunome] = Seu nome completo
-
-[data] = a data do dia que criou a issue
-
-aceite = manter da mesma forma
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
