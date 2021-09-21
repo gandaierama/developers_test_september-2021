@@ -13,15 +13,7 @@ export default function IndexPage({props}:{ props:any }) {
       <Header />
       <div className="row">
         <div className="d-sm-none d-md-block col-md-3">
-        <div className="list-group mt-5">
-            <li className="list-group-item list-group-item-dark p-3 text-center">Genres</li>
-                  {props.gender.genres.map((item:any) => (
-     
-          <a href="#" className="list-group-item list-group-item-action " key={item.id} aria-current="true">
-    {item.name}
-  </a>
-           ))}
-                  </div>
+        <SideBar props={props.gender.genres} />
         </div>
         <div className="col-12 col-md-9">
           <Post posts={props.posts.results} />
